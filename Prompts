@@ -1,0 +1,35 @@
+Write Python code for a file named customers.py.
+It should use the Faker library to generate 100 synthetic customers and save them to data/customers.csv.
+Fields: customer_id, name, email, phone, address, created_at.
+
+Write Python code for products.py.
+Generate 100 products into data/products.csv.
+Fields: product_id, name, category, price, stock.
+
+Create a file orders.py that generates 100 orders in data/orders.csv.
+Fields: order_id, customer_id, order_date, status.
+
+Create a Python file order_items.py.
+Generate synthetic order items referencing orders and products.
+Save to data/order_items.csv.
+Fields: order_item_id, order_id, product_id, quantity, price.
+
+Write Python code for payments.py.
+Generate synthetic payment data referencing order_id.
+Fields: payment_id, order_id, amount, payment_method, payment_date.
+
+Write a Python script called load_sqlite.py that:
+1. Creates an SQLite DB called ecom.db
+2. Creates tables for customers, products, orders, order_items, and payments
+3. Loads data from the CSV files into their respective tables using pandas.to_sql()
+
+Write an SQL query that joins customers, orders, and payments to show:
+customer_id, name, total orders, total amount spent.
+Format it as a .sql file.
+
+git init
+git add .
+git commit -m "Completed ecom A-SDLC exercise"
+git branch -M main
+git remote add origin https://github.com/your-username/ecom-project.git
+git push -u origin main
